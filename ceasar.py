@@ -8,8 +8,10 @@ def get_key():
             print("Please enter a whole number (int) as key")
 
 def get_filename():
-    """Prompts the user to enter the name of the file."""
-    return input("Please enter the name of the file: ")
+    """Prompts the user to enter the name or the path of the file."""
+    filename = input("Please enter the name of or the path to the file: ")
+    filename = filename.replace("\\", "\\\\")
+    return filename
 
 def encrypt_file(filename, key):
     """Encrypts the content of the file with the given key."""
@@ -99,3 +101,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+# todo
+# programm should grab file from path
