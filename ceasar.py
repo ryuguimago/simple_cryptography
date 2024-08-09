@@ -10,7 +10,7 @@ def get_key():
 def get_filename():
     """Prompts the user to enter the name or the path of the file."""
     filename = input("Please enter the name of or the path to the file: ")
-    filename = filename.replace("\\", "\\\\")
+    filename = filename.replace("\\", "\\\\") # replaces \ with \\
     return filename
 
 def encrypt_file(filename, key):
