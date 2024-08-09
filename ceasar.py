@@ -8,8 +8,8 @@ def get_key():
             print("Please enter a whole number (int) as key")
 
 def get_filename():
-    """Prompts the user to enter the path to the file."""
-    return input("Please enter the path to the file: ")
+    """Prompts the user to enter the name of the file."""
+    return input("Please enter the name of the file: ")
 
 def encrypt_file(filename, key):
     """Encrypts the content of the file with the given key."""
@@ -45,6 +45,7 @@ def encrypt_file(filename, key):
     except FileNotFoundError:
         print("Could not find a file with this name")
         return
+    
 
 def decrypt_file(filename, key):
     """Decrypts the content of the file with the given key."""
